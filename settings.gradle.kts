@@ -1,4 +1,4 @@
-rootProject.name = "randomized-gyr"
+rootProject.name = "randomized_gyr"
 
 pluginManagement {
     repositories {

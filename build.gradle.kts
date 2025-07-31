@@ -32,7 +32,7 @@ cloche {
     }
 
     metadata {
-        modId = "randomized-gyr"
+        modId = "randomized_gyr"
         name = "Randomized Gyr"
         description = "Blep"
         author("OracleHisty")
@@ -51,17 +51,17 @@ cloche {
 
         metadata {
             modLoader = "javafml"
-            loaderVersion("[1,)")
+            loaderVersion("1")
 
             dependency {
                 modId = "neoforge"
                 required = true
-                version("[20,)")
+                version("20")
             }
             dependency {
                 modId = "minecraft"
                 required = true
-                version("[1.20.6)")
+                version("1.20.6")
             }
         }
 
