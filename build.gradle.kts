@@ -1,7 +1,7 @@
 import earth.terrarium.cloche.api.metadata.ModMetadata
 
 plugins {
-    id("earth.terrarium.cloche") version "0.10.4"
+    id("earth.terrarium.cloche") version "0.11.20"
 }
 
 repositories {
@@ -47,6 +47,10 @@ cloche {
     }
 
     neoforge {
+        data {
+
+        }
+
         loaderVersion = properties["neoforgeVersion"] as String
 
         metadata {
@@ -76,6 +80,10 @@ cloche {
     }
 
     fabric {
+        data {
+
+        }
+
         metadata {
             entrypoint("main", "net.oraclehisty.gyr_randomized.FabricGyrRandomized")
             dependency {
