@@ -8,12 +8,9 @@ public class GyrRandomized {
 
     public static GyrRandomizedImplementation implementation;
 
-    public static ModItems ITEMS;
-
     public static void init(GyrRandomizedImplementation implementation) {
         GyrRandomized.implementation = implementation;
-
-        ITEMS = new ModItems();
+        ModItems.INSTANCE.init();
     }
 
     public static ResourceLocation id(String name) {

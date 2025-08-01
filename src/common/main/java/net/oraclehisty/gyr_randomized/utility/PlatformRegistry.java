@@ -20,14 +20,14 @@ public abstract class PlatformRegistry<T> {
         register = GyrRandomized.implementation.entryRegister(registry, resourceKey);
     }
 
-    /**
-     * Creates a new entry in this registry.
-     *
-     * @param T The type of the entry.
-     * @param name The name of the entry, this will be an [ResourceLocation.path].
-     * @param entry The entry being added.
-     * @return The entry created.
-     */
+//    /**
+//     * Creates a new entry in this registry.
+//     *
+//     * @param T The type of the entry.
+//     * @param name The name of the entry, this will be an [ResourceLocation.path].
+//     * @param entry The entry being added.
+//     * @return The entry created.
+//     */
     public <V extends T> Holder<V> create(String name, Supplier<V> entry) {
         var holder = register.holder(name, entry);
         queue.add((Holder<T>) holder);
@@ -51,5 +51,9 @@ public abstract class PlatformRegistry<T> {
      */
     public Collection<T> all() {
         return allHolders().stream().map(Holder::value).toList();
+    }
+
+    public void init() {
+
     }
 }

@@ -10,14 +10,17 @@ import net.minecraft.world.level.block.Block;
 import net.oraclehisty.gyr_randomized.utility.PlatformRegistry;
 
 public class ModItems extends PlatformRegistry<Item> {
-    public static ModItems INSTANCE;
+    public final static ModItems INSTANCE;
 
-    public final Holder<Item> GENERIC;
+    public final Holder<Item> GENERIC_PLACEHOLDER;
 
-    public ModItems() {
+    private ModItems() {
         super(Registries.ITEM, BuiltInRegistries.ITEM);
-        INSTANCE = this;
 
-        GENERIC = create("generic", () -> new Item(new Item.Properties()));
+        GENERIC_PLACEHOLDER = create("generic_placeholder", () -> new Item(new Item.Properties()));
+    }
+
+    static {
+        INSTANCE = new ModItems();
     }
 }
